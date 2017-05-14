@@ -1,0 +1,3 @@
+author = ayrock-dev
+version = 0.1
+displayName = Heart of Crimson
