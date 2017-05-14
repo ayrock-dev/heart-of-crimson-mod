@@ -38,8 +38,16 @@ namespace HeartOfCrimson.Items.Armor.DarkInfiltrator
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.DirtBlock, 10);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddIngredient(ItemID.ShadowScale, 2);
+			recipe.AddIngredient(ItemID.Silk, 4);
+			recipe.AddTile(TileID.Loom);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.TissueSample, 2);
+			recipe.AddIngredient(ItemID.Silk, 4);
+			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
