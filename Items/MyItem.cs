@@ -3,11 +3,11 @@ using Terraria.ModLoader;
 
 namespace HeartOfCrimson.Items
 {
-	public class MyItem : ModItem
+	public class ModSword : ModItem
 	{
 		public override void SetDefaults()
 		{
-			item.name = "MyItem";
+			item.name = "Mod Sword";
 			item.damage = 50;
 			item.melee = true;
 			item.width = 40;
