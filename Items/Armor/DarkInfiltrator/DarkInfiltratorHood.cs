@@ -32,7 +32,7 @@ namespace HeartOfCrimson.Items.Armor.DarkInfiltrator
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = "Infiltrator";
-			player.AddBuff(BuffID.Invisibility, 2);
+			player.GetModPlayer<HoCModPlayer>(mod).HasInfiltration = true;
 		}
 
 		public override void AddRecipes()
