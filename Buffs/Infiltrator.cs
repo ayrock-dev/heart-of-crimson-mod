@@ -14,7 +14,7 @@ namespace HeartOfCrimson.Buffs
 
 		public override void Update(Player player, ref int buffIndex) 
 		{
-			// do stuff
+			player.GetModPlayer<HoCModPlayer>(mod).HasInfiltration = true;
 		}
 	}
 }

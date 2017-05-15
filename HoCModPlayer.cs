@@ -22,5 +22,12 @@ namespace HeartOfCrimson
 				damage *= 2;
 			}
 		}
+
+		public override void DrawEffects (PlayerDrawInfo drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
+		{
+			if (HasInfiltration) {
+				a = 0.5f;
+			}
+		}
 	}
 }

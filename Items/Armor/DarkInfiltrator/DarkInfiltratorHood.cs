@@ -32,22 +32,14 @@ namespace HeartOfCrimson.Items.Armor.DarkInfiltrator
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = "Infiltrator";
-			player.GetModPlayer<HoCModPlayer>(mod).HasInfiltration = true;
+			player.AddBuff(mod.BuffType("Infiltrator"), 2);
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.ShadowScale, 2);
-			recipe.AddIngredient(ItemID.Silk, 4);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.TissueSample, 2);
-			recipe.AddIngredient(ItemID.Silk, 4);
-			recipe.AddTile(TileID.Loom);
+			recipe.AddIngredient(ItemID.DirtBlock, 10);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
