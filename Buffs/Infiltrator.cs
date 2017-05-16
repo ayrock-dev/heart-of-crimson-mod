@@ -9,12 +9,12 @@ namespace HeartOfCrimson.Buffs
 		{
 			Main.buffName[Type] = "Infiltrator";
 			Main.buffTip[Type] = "You have invisibility";
-			Main.buffNoTimeDisplay[Type] = true;
-		}
+            canBeCleared = false;
+        }
 
 		public override void Update(Player player, ref int buffIndex) 
 		{
 			player.GetModPlayer<HoCModPlayer>(mod).HasInfiltration = true;
-		}
+        }
 	}
 }

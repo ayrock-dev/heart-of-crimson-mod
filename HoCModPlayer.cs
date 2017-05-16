@@ -10,11 +10,13 @@ namespace HeartOfCrimson
 	public class HoCModPlayer : ModPlayer
 	{
 		public bool HasInfiltration;
+        public int InfiltrationCooldown;
 		
 		public override void ResetEffects()
 		{
 			HasInfiltration = false;
-		}
+            InfiltrationCooldown = 0;
+        }
 
 		public override void GetWeaponDamage(Item item, ref int damage) 
 		{
@@ -22,12 +24,5 @@ namespace HeartOfCrimson
 				damage *= 2;
 			}
 		}
-
-		public override void DrawEffects (PlayerDrawInfo drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
-		{
-			if (HasInfiltration) {
-				a = 0.5f;
-			}
-		}
-	}
+    }
 }

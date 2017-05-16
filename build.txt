@@ -1,3 +1,9 @@
 author = ayrock-dev
-version = 0.1
+version = 0.1.0
 displayName = Heart of Crimson
+homepage = https://github.com/ayrock-dev/heart-of-crimson-mod
+hideCode = false
+hideResources = false
+includeSource = true
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = true
