@@ -75,7 +75,7 @@ namespace HeartOfCrimson.Items.Weapons
             if(nearestNPC != null)
             {
                 
-                Projectile.NewProjectile(nearestNPC.position, new Vector2(0,0), type, damage, knockback, player.whoAmI, (int)DrainLifeParticle.DrainLifeParticleType.WeaponProjectile);
+                Projectile.NewProjectile(nearestNPC.Center, new Vector2(0,0), type, damage, knockback, player.whoAmI, (int)DrainLifeParticle.DrainLifeParticleType.WeaponProjectile);
             }
 
             return false; // do not spawn a default projectile
